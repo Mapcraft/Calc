@@ -4,9 +4,9 @@ def selectMode():
         if mode=="1" or mode=="2" or mode=="6":
             break
    
-    else:
-        mode=raw_input("Invalid selection.1=Basic Calculator. 2=Binary Conversion.6=Hexadecimal Conversion.")
-        calculate(mode)
+        else:
+            mode=raw_input("Invalid selection.1=Basic Calculator. 2=Binary Conversion.6=Hexadecimal Conversion.")
+    calculate(mode)
 
 selectMode()
 
