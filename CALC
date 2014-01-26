@@ -23,5 +23,3 @@ def calculate(mode):
     elif mode=="6":
         num=raw_input("Enter a number to convert it to hexadecimal!")
         print int(num,base=16)
-
-        
