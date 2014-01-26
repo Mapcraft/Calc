@@ -1,14 +1,3 @@
-def selectMode():
-    mode=raw_input("1=Basic Calculator. 2=Binary Conversion. 6=Hexadecimal Conversion.")
-    while True:
-        if mode=="1" or mode=="2" or mode=="6":
-            break
-   
-        else:
-            mode=raw_input("Invalid selection.1=Basic Calculator. 2=Binary Conversion.6=Hexadecimal Conversion.")
-    calculate(mode)
-
-selectMode()
 
 
 def calculate(mode):
@@ -23,3 +12,25 @@ def calculate(mode):
     elif mode=="6":
         num=raw_input("Enter a number to convert it to hexadecimal!")
         print int(num,base=16)
+
+
+
+
+
+def selectMode():
+    mode=raw_input("1=Basic Calculator. 2=Binary Conversion. 6=Hexadecimal Conversion.")
+    while True:
+        if mode=="1" or mode=="2" or mode=="6":
+            break
+   
+        else:
+            mode=raw_input("Invalid selection.1=Basic Calculator. 2=Binary Conversion.6=Hexadecimal Conversion.")
+    calculate(mode)
+
+selectMode()
+
+
+def main():
+  selectMode()
+
+        
