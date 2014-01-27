@@ -1,20 +1,39 @@
 
-
 def calculate(mode):
 #Checking for mode. This is basic calc mode.
     if mode=="1":
-        print "Use * for multiplication, / for division, + and - for difference and % for modulo. Do not enter non integers here."
+        num=raw_input("Use * for multiplication, / for division, + and - for difference and % for modulo. Do not enter non integers here.")
+        if num=="exitmode":
+            selectmode()
+            return 0
 #Checking for mode. This number will be used for conversion into binary
     elif mode=="2":
-        num=raw_input("Enter a number to convert it to binary!")
-        print int(num,base=2)
+        num=raw_input("Enter a number to convert it to base 2!")
+        try:
+            float(num)
+        except ValueError:
+            print "Not a float"
+        if num=="exitmode":
+            selectmode()
+            return 0
+        else:
+            
+            print bin(int(num))
 #Checking for mode. This number will be used for conversion into hexadecimal
     elif mode=="6":
-        num=raw_input("Enter a number to convert it to hexadecimal!")
-        print int(num,base=16)
+        num=raw_input("Enter a number to convert it to base 16!")
+        if num=="exitmode":
+            selectmode()
+            return 0
+        else:
 
-
-
+           
+            print hex(int(num)).rstrip("L").lstrip("0x") or "0"
+            
+        try:
+            float(num)
+        except ValueError:
+            print "Not a float"
 
 
 def selectMode():
@@ -30,7 +49,21 @@ def selectMode():
 selectMode()
 
 
+
+
+
+
+    
+       
 def main():
-  selectMode()
+    selectMode()
+    calculate()
+
+
+
+    
+
+
+
 
         
